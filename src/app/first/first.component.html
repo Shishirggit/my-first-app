@@ -1,0 +1,17 @@
+<h2>{{ title }}</h2>
+<h3>{{headingTwo}}</h3>
+<h3>{{returnFunctionHeading()}}</h3>
+<hr>
+<a [href]="imageUrl">binding using </a><hr>
+<a href="{{imageUrl}}">binding using</a>
+<hr>
+<button id="button" (click)="changeValue()" type="button">Change Value</button>
+<ul>
+<li>{{Name[0]}}<li>
+  <li>{{Name[1]}}<li>
+    <li>{{Name[2]}}<li>
+      <li>{{Name[3]}}<li>
+</ul>
+<button id="button" (click)="toggleValueOfName()" type="button">Change Name</button>
+<input type="text" [(ngModel)]="dataTwoWay" [value]="dataTwoWay">{{dataTwoWay}}
+<h4> {{urlPassedString}}</h4>

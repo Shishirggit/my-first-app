@@ -1,0 +1,27 @@
+<form [formGroup]="usrForm" (ngSubmit)="addUser(usrForm)">
+<label for="Name">Name</label>
+<input type="text" formControlName="name">
+<div *ngIf="usrForm.get('name').hasError('required')">
+    Name is required
+</div>
+<br/>
+<label for="Contact">Contact</label>
+<input type="text" formControlName="contact">
+<div *ngIf="usrForm.get('contact').hasError('required')">
+    Contact is required
+</div>
+<br/>
+<label for="Email">Email</label>
+<input type="text" formControlName="email">
+<div *ngIf="usrForm.get('email').hasError('required')">
+    Email is required
+</div>
+<br/>
+ <button type="submit" name="button" [disabled]="usrForm.invalid">Click</button>
+</form>
+<div class="">
+  {{usrForm.value | json}}
+</div>
+<ul *ngFor="let user of userList">
+  <li>{{user.name}}</li>
+</ul>

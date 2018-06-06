@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<!--<app-first [urlPassedString]="urlstring"></app-first> -->
+<!-- <app-directives-example></app-directives-example> -->
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li class="active"><a routerLink="/">Router</a></li>
+    <li><a routerLink="/first">First</a></li>
+    <li><a routerLink="/directives">Directive</a></li>
+    <li><a routerLink="/template-driven">Template Form</a></li>
+    <li><a routerLink="/reactive-forms">Reactive Form</a></li>
+    <li><a routerLink="/serv-example">Service Example</a></li>
+      </ul>
+  </div>
+</div>
+<div class="">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,17 @@
+<form #frm="ngForm" (ngSubmit)="submitForm(frm)">
+<label for="Name">Name</label>
+<input type="text" name="name" ngModel required>
+<label for="Contact">Contact</label>
+<input type="text" name="contact" ngModel required>
+<label for="Email">Email</label>
+<input type="text" name="email" ngModel required>
+ <button type="submit" name="button" [disabled]="frm.invalid">Click</button>
+</form>
+<div class="">
+  {{frm.value | json}}
+</div>
+<div class="">
+<ul *ngFor="let user of userList">
+  <li>{{user.name}}</li>
+</ul>
+</div>

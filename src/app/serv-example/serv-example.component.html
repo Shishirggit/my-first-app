@@ -1,0 +1,13 @@
+<form [formGroup]="formServ" (ngSubmit)="addItemToList()">
+  <div class="">
+    <input type="text" formControlName="item" value=""/><br>
+    <button type="submit" name="button">Add Item</button>
+  </div>
+</form>
+<div class="">
+  {{formServ.value | json}}
+</div>
+<button type="button" name="button" (click)="getItemFromServiceClass()">Get List</button>
+<ul *ngFor='let item of itemRecived'>
+  <li>{{item}}</li>
+<ul>
